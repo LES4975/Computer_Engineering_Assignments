@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/main.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/allPost.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/PostPage.css'%}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Gentium+Plus:wght@700&family=Inter&family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Web Programming Assignment#6</title>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <a href="{% url 'blog:main' %}"><p id="BlogName">Assignment#6</p></a>
+        <a href="{% url 'blog:main' %}"><button id="GoToMain">Main Page</button></a>
+        <a href="{% url 'blog:allPost' %}"><button id="AllPost">All post</button></a>
+      </div>
+    </header>
+
+    <div class="Post_Space">
+      <div class="Post_Content">
+        <div class="Post_title">
+          <p class="Post_Name">{{post.title}}</p>
+          <div class="Info">
+            <p id="writer">written by Lee Eunseo</p>
+            <p id="descripted_date">created at : {{post.created_date}}</p>
+            <p id="updated_date">updated at : {{post.updated_date}}</p>
+          </div>
+        </div>
+        <hr />
+        <div id="Details">
+         <img class="PostImage" src="/static/images/default.png" alt="(Post Image)"/>
+          <p>
+            {{post.content|linebreaksbr}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

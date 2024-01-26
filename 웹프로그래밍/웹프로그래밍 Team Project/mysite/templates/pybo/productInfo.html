@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'productInfo.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Random Papers</title>
+</head>
+<body>
+    <header>
+        <div id="sharebox"><a href="group.html" id="share"><b>LET'S<br>START</a></b></div>
+        <h1><a href="newmain.html" id="pagename">SHARESHARE</a></h1>
+
+        <nav>
+            <a href="joined.html" id="share">CART</a>
+            <a href="signup.html"><img src="img/user.png" alt="searchimg" id="login"></a>
+        </nav>
+
+    </header>
+    
+    <div class="gridContainer" style="margin-top: 200px; margin-bottom: 200px;">
+        <div class="leftMargin"></div>
+        <div class="left">
+            <div class="productImg">
+                <img src="https://image.aladin.co.kr/product/13740/67/cover500/8970129812_2.jpg" alt="">
+                <button><img src="/img/see.png" alt=""></button>
+            </div>
+            <div class="arrow">
+                <div class="arrowLeft"></div>
+                <div><button>&lt;</button></div>
+                <div></div>
+                <div><button>&gt;</button></div>
+                <div></div>
+            </div>
+
+            <div>
+                <div class="comment">
+                    <p style="font-weight:700;">Comment</p>
+                    <p style="padding: 5px; font-weight: 300;">5월 20일에 마감하겠습니다. 작업때문에 필요해서 공구신청 올려봅니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <div class="productName">Random Papers</div>
+            <div class="price">
+                <div class="currentPrice">$29.99</div>
+                <div class="originalPrice">$60</div>
+                <div class="priceMargin"></div>
+            </div>
+            <div class="person">
+                <div class="personName">John Adams</div>
+                <div class="personKakao"><a href="https://kakao.com">Kakao</a></div>
+                <div class="personPicture"><img src="img/person.png" alt="" id="personImg"></div>
+            </div>
+            <div class="productProgress">
+                <progress value="3" max="8"></progress>
+                <div style="display: inline; font-size: 30px; align-items: center; font-weight: 500;">24% 진행중</div>
+            </div>
+            <div class="submitButtons">
+                <button class="joinButton">JOIN</button>
+                <div style="width: 100px;"></div>
+                <button class="shareButton">SHARE</button>
+
+            </div>
+
+        </div>
+        <div class="rightMargin"></div>
+    </div>
+    <h1>{{ question.subject }}</h1>
+    <div>
+        {{ question.content }}
+    </div>
+    <div id="finish">
+        <footer class="footer">
+            <h1><a href="newmain.html" id="pagename">SHARESHARE</a></h1>
+            <div>
+            This is Team TAG's Project!!<br>
+            최락원, 김민수, 이은서, 변승진, 이은지, 유종혁
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

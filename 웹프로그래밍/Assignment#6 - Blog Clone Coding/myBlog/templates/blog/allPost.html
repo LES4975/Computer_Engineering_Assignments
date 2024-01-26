@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/allPost.css' %}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@700&family=Inter&family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Web Programming Assignment#6</title>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <a href="{% url 'blog:main' %}"><p id="BlogName">Assignment#6</p></a>
+        <a href="{% url 'blog:main' %}"
+          ><button id="GoToMain">Main Page</button></a
+        >
+      </div>
+    </header>
+    <div class="viewing">
+      <h4 id="LatestPostTitle"><u>All Post</u></h4>
+      <br />
+      {% if Post_list %} {% for BlogPost in Post_list %}
+      <a href="{% url 'blog:PostDetail' BlogPost.id %}">
+        <article class="PostBox">
+          <img
+            class="PostImage"
+            src="/static/images/default.png"
+            alt="(Post Image)"
+          />
+          <h5 class="ContentTitle">{{BlogPost.title}}</h5>
+          <p class="ContentDetail">{{BlogPost.content|truncatewords:120}}</p>
+        </article>
+      </a>
+      {% endfor %} {% else %}
+      <p>There is no post here!!</p>
+      {% endif %}
+      <br />
+    </div>
+  </body>
+</html>

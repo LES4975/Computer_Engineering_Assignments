@@ -1,0 +1,82 @@
+body {
+  background-color: #242424;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+#header {
+  background-color: slateblue;
+  margin: 0;
+  height: 100%;
+}
+
+#menu {
+  text-align: center;
+  display: block;
+  padding-bottom: 10px;
+}
+
+#start,
+#reset {
+  margin: auto 30px;
+}
+
+h1 {
+  text-align: center;
+  padding: 30px 0px;
+  margin: 0;
+  color: aliceblue;
+}
+
+span {
+  font-size: 30px;
+}
+
+button {
+  height: 100%;
+  padding: 10px;
+  font-size: 30px;
+  margin: 0;
+  letter-spacing: 1px;
+  background-color: dodgerblue;
+  color: rgb(169, 204, 229);
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(41, 95, 149);
+}
+
+button:active {
+  color: #242424;
+}
+p {
+  margin: 10px auto;
+  text-align: center;
+  color: aliceblue;
+  font-size: 40px;
+}
+
+#gamebox {
+  margin: 0 auto;
+  max-width: 377px;
+  max-height: 365px;
+  background-color: rgb(74, 74, 74);
+  border-radius: 10px;
+}
+#container {
+  padding: 20px;
+}
+.box {
+  background-color: grey;
+  border-radius: 10px;
+  width: 75px;
+  height: 75px;
+  margin: 1px;
+  display: inline-flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 200px);
+  justify-items: center;
+}

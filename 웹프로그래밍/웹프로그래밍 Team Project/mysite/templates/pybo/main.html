@@ -1,0 +1,138 @@
+
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<html lang="en">
+<head>
+    <meta chrarset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>main-page</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="sharebox">
+            <a href="/" id="share"><b>LET'S<br>START</a></b>
+        </div>
+        <h1><a href="/" id="pagename">SHARESHARE</a></h1>
+
+        <nav>
+            <a href="joined.html" id="share">CART</a>
+
+            {% if user.is_authenticated %}
+            <a class="nav-link" href="{% url 'common:logout' %}">{{ user.username }}(로그아웃)</a>
+            {% else %}
+            <a class="nav-link" href="{% url 'common:login' %}">로그인</a>
+            {% endif %}
+        </nav>
+
+    </header>
+
+        <div id="category">
+            <a href="/">
+                <div style="color: black;">Book</div>
+            </a>
+            <a href="food.html">
+                <div>Food</div>
+            </a>
+            <a href="stationery.html">
+                <div>Stationery</div>
+            </a>
+            <a href="clothes.html">
+                <div>Clothes</div>
+            </a>
+            <a href="etc.html">
+                <div>Etc</div>
+            </a>
+        </div>
+
+<div id="contentbox">
+    <div id="contenthead">
+        <form action="" method="get" style="width:100%;">
+            <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input class="search-bar__input" type="search" placeholder="search" />
+        </div>
+        </form>
+
+        <select name="filter" id="filter">
+            <option value="recent">recent</option>
+            <option value="expensive">Top price</option>
+            <option value="cheap">Low price</option>
+            <option value="deadline">due date</option>
+        </select>
+    </div>
+    <div id="contents">
+        {% if Post_list %}
+            {% for Post in Post_list %}
+
+        <article>
+                 <a href="/pybo/{{ Post.id }}/"><img src="{{Post.image.url}}" alt="book"></a>
+            <div class = "contents_bottom">
+                <div class="book_name">
+                    <div>{{Post.title}}</div>
+                    <div><img  onclick="change()" src="img/heart.png" alt="heart" id="img1"></div>
+                </div>
+
+                <div class="prog">
+                    <progress value="80" max="100"></progress>
+                </div>
+
+                <div class="price">
+                    <div class="personbox"><img src="img/person.png" alt="person" class="person"> <p style="margin: 0;">8/10</p></div>
+                    <span style="color:balck"> <del style="color:rgb(180, 179, 179); font-size: 13px;">{{Post.price}}  </del>  {{Post.price}}</span>
+                </div>
+
+            </div>
+                <script>
+                let flag = true;
+
+                function change(){
+                    document.getElementById("img1").src = flag ? "img/heartred.png" : "img/heart.png";
+                    flag = !flag;
+                }
+                </script>
+
+        </article>
+            {% endfor %}
+        {% else %}
+            <p>상품이 없습니다.</p>
+        {% endif %}
+
+
+    </div>
+</div>
+    <div class="pagenumberblock">
+        <a href=""> <b>1</b> </a>
+        <a href=""> 2 </a>
+        <a href=""> 3 </a>
+        <a href=""> 4 </a>
+
+    </div>
+
+
+
+
+
+    <div id="finish">
+        <footer class="footer">
+            <h1><a href="/" id="pagename">SHARESHARE</a></h1>
+            <div>
+            This is Team TAG's Project!!<br>
+            최락원, 김민수, 이은서, 변승진, 이은지, 유종혁
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+
+</html>

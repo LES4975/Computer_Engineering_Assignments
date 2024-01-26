@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chrarset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'signup-style.css' %}">
+    <title>signup page</title>
+</head>
+
+<body>
+    <header>
+        <div id="sharebox"><a href="group.html" id="share"><b>LET'S<br>START</a></b></div>
+        <h1><a href="newmain.html" id="pagename">SHARESHARE</a></h1>
+
+        <nav>
+            <a href="joined.html" id="share">CART</a>
+            <a href="login.html"><img src="img/user.png" alt="searchimg" id="login"></a>
+        </nav>
+
+    </header>
+
+
+    <div id="contents">
+
+        <p class="welcome">Welcome</p>
+        <p class="explain">Buy it at a low price using a joint purchase</p>
+
+        <form action="{% url 'common:signup' %}" method="post">
+            {% csrf_token %}
+            {% include "form_errors.html" %}
+
+            <label for="myid"><b>ID</b></label> <br>
+            <input type="text" placeholder="Please enter your ID" class="form-control" name="username" id="username"
+            value="{{ form.username.value|default_if_none:'' }}">
+            <br>
+
+
+            <label for="password1"><b>PASSWORD</b></label><br>
+            <input type="password" placeholder="Please enter your Password" class="form-control" name="password1" id="password1"
+            value="{{ form.password1.value|default_if_none:'' }}">
+            
+            <br>
+
+            <label for="password2"><b>CONFIRM PASSWORD</b></label><br>
+    
+            <input type="password" placeholder="Confirm your Password" class="form-control" name="password2" id="password2"
+                   value="{{ form.password2.value|default_if_none:'' }}">
+
+            <label for="mymail"><b>EMAIL</b></label> <br>
+            <input type="text" placeholder="Please enter your Email" class="form-control" name="email" id="email"
+                   value="{{ form.email.value|default_if_none:'' }}">
+            
+            <br>
+            <label for="check"></label>
+            <input type="checkbox" name="check"> <span  id="check">I agree to the Terms and Conditions and Privacy Policy.</span>
+            
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Sign up</button>
+        </form>
+
+
+    </div>
+
+    <div id="finish">
+        <footer class="footer">
+            <h1><a href="newmain.html" id="pagename">SHARESHARE</a></h1>
+            <div>
+            This is Team TAG's Project!!<br><br>
+            최락원, 김민수, 이은서, 변승진, 이은지, 유종혁
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

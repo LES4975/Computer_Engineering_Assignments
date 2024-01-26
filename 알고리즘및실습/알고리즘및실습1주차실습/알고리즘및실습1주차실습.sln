@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "알고리즘및실습1주차실습", "알고리즘및실습1주차실습\알고리즘및실습1주차실습.vcxproj", "{67A87A3D-B0C1-4B3D-AF53-C0590B124316}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67A87A3D-B0C1-4B3D-AF53-C0590B124316}.Debug|x64.ActiveCfg = Debug|x64
+		{67A87A3D-B0C1-4B3D-AF53-C0590B124316}.Debug|x64.Build.0 = Debug|x64
+		{67A87A3D-B0C1-4B3D-AF53-C0590B124316}.Debug|x86.ActiveCfg = Debug|Win32
+		{67A87A3D-B0C1-4B3D-AF53-C0590B124316}.Debug|x86.Build.0 = Debug|Win32
+		{67A87A3D-B0C1-4B3D-AF53-C0590B124316}.Release|x64.ActiveCfg = Release|x64
+		{67A87A3D-B0C1-4B3D-AF53-C0590B124316}.Release|x64.Build.0 = Release|x64
+		{67A87A3D-B0C1-4B3D-AF53-C0590B124316}.Release|x86.ActiveCfg = Release|Win32
+		{67A87A3D-B0C1-4B3D-AF53-C0590B124316}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B3F6D7F-E032-4A84-A8FC-361648AD5A49}
+	EndGlobalSection
+EndGlobal

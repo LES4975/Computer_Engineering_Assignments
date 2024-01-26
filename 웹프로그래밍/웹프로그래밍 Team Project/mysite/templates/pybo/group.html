@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chrarset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'group-style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+    <title>Make Group</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="sharebox"><a href="group.html" id="share"><b>LET'S<br>START</a></b></div>
+        <h1><a href="newmain.html" id="pagename">SHARESHARE</a></h1>
+
+        <nav>
+            <a href="joined.html" id="share">CART</a>
+            <a href="login.html"><img src="img/user.png" alt="searchimg" id="login"></a>
+        </nav>
+
+    </header>
+
+
+<!--    <div id="made">-->
+<!--        <div class="container" style="height:550px;">-->
+<!--            <div class="image-upload" id="image-upload">-->
+<!--    -->
+<!--                <form method="post" enctype="multipart/form-data">-->
+<!--                    <div class="button">-->
+<!--                        <label for="chooseFile">-->
+<!--                            Image Upload-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">-->
+<!--                </form>-->
+<!--    -->
+<!--                <div class="fileContainer">-->
+<!--                    <div class="fileInput">-->
+<!--                        <p>FILE NAME: </p>-->
+<!--                        <p id="fileName"></p>-->
+<!--                    </div>-->
+<!--                    <div class="buttonContainer">-->
+<!--                        <div class="submitButton" id="submitButton">SUBMIT</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            -->
+<!--            <div class="image-show" id="image-show"></div>-->
+<!--            <script src="imageupload.js"></script>-->
+<!--        </div>-->
+
+<!--        <div id="info">-->
+<!--            <form action="" method="post">-->
+
+<!--                <label for="bookname"><b>Name of the item</b></label><br>-->
+<!--                <input type="text" name="bookname" id="bookname" placeholder="Please enter the Name of the item">-->
+<!--    -->
+<!--                <br>-->
+<!--    -->
+<!--                <label for="author"><b>Category</b></label> <br>-->
+<!--                <div id="choose">-->
+<!--                    <input type='radio'  name="book" value='Book' checked/>Book-->
+<!--                    <input type='radio'  name="book" value='Food' />Food-->
+<!--                    <input type='radio'  name="book" value='Stationery' />Stationery-->
+<!--                    <input type='radio'  name="book" value='Clothes' />Clothes-->
+<!--                    <input type='radio'  name="book" value='Etc' />Etc-->
+<!--                </div>-->
+<!--    -->
+<!--                <br>-->
+<!--                -->
+<!--                <label for="orginal"><b>Original Price</b></label> <br>-->
+<!--                <input type="text" id="original" placeholder="Please enter the original price">-->
+
+<!--                <br>-->
+
+<!--                <label for="usernumber"><b>Number of participants</b></label><br>-->
+<!--                <div id="cal">-->
+<!--                    <input type="number" id="usernumber" placeholder="Please write down the number of applicants">-->
+<!--                    <button type="button" id="calbutton">CAL</button>-->
+<!--                </div>-->
+<!--                -->
+<!--                <br>-->
+
+<!--                <label for="discount"><b>Discount Price</b></label><br>-->
+<!--                <p id="discount"></p>-->
+<!--                <script src="imageupload.js"></script>-->
+
+<!--                <br>-->
+<!--                -->
+<!--                <label for="comment" class="title"><b>Information</b></label><br>-->
+<!--                <textarea cols="40" rows="3" id="comment" placeholder="Please enter your information and link of this product"></textarea>-->
+<!--    -->
+<!--                <br>-->
+<!--    -->
+<!--                <input type="submit" name="submit" value="Create"/>-->
+<!--            </form>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<h1>{{ question.subject }}</h1>
+<div>
+    {{ question.content }}
+</div>
+
+    <div id="finish">
+        <footer class="footer">
+            <h1><a href="newmain.html" id="pagename">SHARESHARE</a></h1>
+            <div>
+            This is Team TAG's Project!!<br><br>
+            최락원, 김민수, 이은서, 변승진, 이은지, 유종혁
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

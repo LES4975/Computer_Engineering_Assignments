@@ -1,0 +1,52 @@
+body {
+  background-color: darkseagreen;
+  margin: 0;
+}
+
+.Post_Space {
+  margin: 40px 40px;
+  border: 1px solid #424242;
+  background-color: aliceblue;
+  border-radius: 15px;
+}
+
+.Post_Name {
+  margin: 10px;
+  font-size: 40px;
+  padding: 30px 30px 30px 30px;
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+}
+
+.Info {
+  margin: auto 0;
+  padding: 30px 40px 0px 40px;
+  display: block;
+  float: right;
+  text-align: center;
+}
+
+hr {
+  margin: 0px 100px;
+}
+
+img {
+  width: 600px;
+  height: 400px;
+  display: block;
+  transform: rotate(-5deg);
+  margin: 50px;
+  box-shadow: 4px 4px 2px 1px rgba(75, 78, 76, 0.438);
+}
+
+#Details {
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+  margin: 0 30px;
+  padding: 30px 10px;
+}
+
+#writer, #descripted_date, #updated_date {
+  font-family: 'Oswald', sans-serif;
+  margin: auto;
+}
